@@ -44,17 +44,33 @@ $('#slider').vegas({
   //timer:false,// プログレスバーを非表示したい場合はこのコメントアウトを外してください
 
 }); // ブラー
+// $(window).scroll(function (){
+// 	$('.scroll-space').each(function(){
+// 		var elemPos = $(this).offset().top,
+// 		scroll = $(window).scrollTop(),
+// 		windowHeight = $(window).height();
+// 			if (scroll > elemPos - windowHeight + 150){
+// 				$(this).addClass('scrollin');
+// 			}
+// 	});
+// });
 
-$(window).scroll(function () {
-  $('.scroll-space').each(function () {
-    var elemPos = $(this).offset().top,
-        scroll = $(window).scrollTop(),
-        windowHeight = $(window).height();
+function fadeIn() {
+  $('.fadeUpTrigger').each(function () {
+    var scroll = $(window).scrollTop();
+    var triTop = $(this).offset().top + 100;
+    var winHight = $(window).height();
 
-    if (scroll > elemPos - windowHeight + 150) {
-      $(this).addClass('scrollin');
+    if (scroll >= triTop - winHight) {
+      $(this).addClass('fadeUp');
+    } else {
+      $(this).removeClass('fadeUp');
     }
   });
+}
+
+$(window).scroll(function () {
+  fadeIn();
 }); // 一ページ表示
 
 $.scrollify({

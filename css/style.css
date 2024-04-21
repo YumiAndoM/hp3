@@ -117,12 +117,20 @@ footer
     transform: translate(-50%, -50%);
   }
 }
-.catch__copy .scroll-space {
-  transition: all 0.5s;
-  filter: blur(10px);
+.catch__copy .fadeUp {
+  animation: fadeUpAnime 0.8s forwards;
+  opacity: 0;
 }
-.catch__copy .scroll-space.scrollin {
-  filter: blur(0);
+.catch__copy .fadeUpTrigger {
+  opacity: 0;
+}
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .catch__copy__title {
   font-size: 200%;

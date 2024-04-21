@@ -36,17 +36,36 @@ $('#slider').vegas({
 
 	// ブラー
 
-$(window).scroll(function (){
-	$('.scroll-space').each(function(){
-		var elemPos = $(this).offset().top,
-		scroll = $(window).scrollTop(),
-		windowHeight = $(window).height();
+// $(window).scroll(function (){
+// 	$('.scroll-space').each(function(){
+// 		var elemPos = $(this).offset().top,
+// 		scroll = $(window).scrollTop(),
+// 		windowHeight = $(window).height();
 
-			if (scroll > elemPos - windowHeight + 150){
-				$(this).addClass('scrollin');
-			}
-	});
-});
+// 			if (scroll > elemPos - windowHeight + 150){
+// 				$(this).addClass('scrollin');
+// 			}
+// 	});
+// });
+
+function fadeIn() {
+	$('.fadeUpTrigger').each(function () {
+  let scroll = $(window).scrollTop();
+  let triTop = $(this).offset().top + 100;
+  let winHight = $(window).height();
+  if (scroll >= triTop - winHight) {
+    $(this).addClass('fadeUp');
+  } else {
+    $(this).removeClass('fadeUp');
+  }
+  });
+  
+}
+
+
+  $(window).scroll(function () {
+    fadeIn();
+  });
 
 
 
