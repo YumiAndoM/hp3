@@ -1,0 +1,87 @@
+@use "../global" as *;
+
+
+/*==================================================
+details
+===================================*/
+
+#details__main {
+  width: 100%;
+  max-width: 1200px;
+  @include marginCenter;
+  margin-bottom: 100px;
+
+  margin-top: 200px;
+}
+
+// .details__aria {
+  
+// }
+
+.details {
+  &__img__block {
+    &-img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+    }
+  }
+
+  &__day {
+    font-size: 300%;
+    margin-top: 50px;
+  }
+
+  &__title {
+    font-size: 300%;
+  }
+
+  &__text {
+    font-size: 150%;
+    margin-top: 30px;
+    line-height: 1.3em;
+  }
+}
+
+
+.details {
+
+  &__linkArea {
+    width: 30%;
+    @include marginCenter;
+    margin-top: 100px
+  }
+  &__link__area {
+    @include flex;
+    
+
+  }
+
+  &__preview__block {
+
+    font-size: 120%;
+
+    &::after {
+      content: "<";
+      
+
+    }
+  }
+  
+  &__blogLink {
+    font-size: 200%;
+  }
+
+  &__next__block {
+    font-size: 120%;
+
+    &::before {
+      content: ">";
+    }
+  }
+}
+
+.detailsLink {
+  text-decoration: none;
+  color: $cBlack;
+}

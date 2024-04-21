@@ -1,0 +1,100 @@
+@use "../global" as *;
+
+/*==================================================
+Contact
+===================================*/
+
+
+.contactWrapper {
+  width: 100%;
+  height: 120vh;
+  background: linear-gradient(253deg, rgba(249,139,164,1) 0%, rgba(249,139,164,1) 40%, rgba(255,255,255,1) 100%);
+  position: relative;
+
+
+  @include max(m) {
+    height: 150vh;
+  }
+}
+
+.contact__box {
+  max-width: 700px;
+  height: 700px;
+  width: 100%;
+  background: $cWhite;
+  position: absolute;
+  @include positionArrangement($top:40%, $translateY: -40%);
+  padding-bottom: 20px;
+
+
+  @include max(m) {
+    width: 90%;
+    height: 900px;
+  }
+
+  
+  &__title {
+    &__h1 {
+      font-size: 500%;
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.contact-wrapper__form__box {
+  @include flexTop(center);
+  margin-bottom: 20px;
+
+  @include max(m) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  &__ttl {
+    width: 30%;
+    line-height: 3;
+
+    @include max(m) {
+      width: 90%;
+    }
+  }
+
+  &__input,
+  &__area {
+    width: 50%;
+    background: $cLightGray;
+    border: solid 1px $cGray;
+    
+    @include max(m) {
+      width: 90%;
+    }
+  }
+
+  &__input {
+    line-height: 3;
+  }
+  &__area {
+    height: 200px;
+  }
+}
+
+.contact-btn {
+  width: 150px;
+  background-color: $cBlack;
+  @include marginCenter;
+  color: $cWhite;
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+  font-size: 1.5em;
+  border: none;
+  margin-top: 50px;
+
+  &:hover {
+    background-color: $cWhite;
+    color: $cBlack;
+    border: 1px solid $cGray;
+    transition: 0.5s;
+  }
+}

@@ -1,0 +1,739 @@
+@charset "UTF-8";
+body {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+
+.dancing-script-fonts {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*==================================================
+header
+===================================*/
+.list__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  right: 3em;
+  top: 2em;
+  width: 30em;
+  z-index: 999999;
+}
+@media only screen and (max-width: 768px) {
+  .list__wrapper {
+    width: 50%;
+    right: 3em;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .list__wrapper {
+    width: 70%;
+    right: 3%;
+  }
+}
+.list__item {
+  font-size: 1.5em;
+}
+@media only screen and (max-width: 768px) {
+  .list__item {
+    margin-left: 2%;
+  }
+}
+.list__item__link {
+  color: #333333;
+  text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+  .list__item__link {
+    font-size: 70%;
+  }
+}
+
+.h1__title {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  font-size: 800%;
+  letter-spacing: 0.1em;
+  top: 40%;
+}
+@media only screen and (max-width: 768px) {
+  .h1__title {
+    font-size: 400%;
+  }
+}
+
+.h2__subtitle {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  top: 45%;
+  font-size: 300%;
+  letter-spacing: 0.2em;
+}
+
+#slider {
+  width: 100%;
+  height: 100vh;
+  /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+.catch__copy__box {
+  position: absolute;
+  z-index: 5;
+  width: 15em;
+  display: block;
+  padding: 3em;
+  background: #ffffff;
+  opacity: 0.7;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+}
+@media only screen and (max-width: 768px) {
+  .catch__copy__box {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.catch__copy .scroll-space {
+  transition: all 0.5s;
+  filter: blur(10px);
+}
+.catch__copy .scroll-space.scrollin {
+  filter: blur(0);
+}
+.catch__copy__title {
+  font-size: 200%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.catch__copy__title__ruby {
+  font-size: 70%;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.catch__copy__title__sub {
+  margin-bottom: 3em;
+  font-size: 120%;
+}
+.catch__copy__text {
+  font-size: 120%;
+  line-height: 1.5em;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.box__img {
+  position: absolute;
+  z-index: 1;
+}
+.box__title {
+  position: absolute;
+  z-index: 5;
+  font-size: 600%;
+  color: #ffffff;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+}
+
+.home__vewPhotos__bottun {
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -60%);
+  width: 20em;
+  text-align: center;
+}
+.home__vewPhotos__bottun__link {
+  font-size: 1.5em;
+  /*ボタンの形状*/
+  display: inline-block;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 13em;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  color: #fff;
+  /*アニメーションの指定*/
+  transition: all 0.4s ease-out;
+}
+
+.home__vewPhotos__bottun__link:hover,
+#box2 .home__vewPhotos__bottun__link:hover {
+  /*ボタンの形状*/
+  border-color: transparent;
+  color: #fff;
+  /*背景の色と形状*/
+  background: linear-gradient(270deg, #3bade3 0%, #9844b7 50%, #44ea76 100%);
+  background-size: 200% auto;
+  background-position: right center;
+  /*ボックスの影*/
+  box-shadow: 0 5px 10px rgba(250, 108, 159, 0.4);
+}
+
+/*==================================================
+Photos
+===================================*/
+.photos__title__h1 {
+  width: 100%;
+  height: 500px;
+  font-size: 800%;
+  text-align: center;
+  line-height: 500px;
+}
+
+.photos__slideshow__container {
+  width: 100%;
+  height: 200px;
+  display: block;
+  margin-bottom: 500px;
+}
+.photos__slideshow__title {
+  font-size: 400%;
+  padding-left: 50px;
+}
+
+#photos__box1 .seasonColor {
+  color: #E3A5B5;
+}
+
+#photos__box2 .seasonColor {
+  color: #F5A600;
+}
+
+#photos__box3 .seasonColor {
+  color: #A57027;
+}
+
+#photos__box4 .seasonColor {
+  color: #C2D3E9;
+}
+
+.photos__slider__box {
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  width: 95%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+.photos__slider__box__text {
+  width: 100%;
+  height: 160px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  margin-bottom: 30px;
+}
+.photos__slider__box__text__h3 {
+  font-weight: bold;
+  padding-top: 30px;
+  font-size: 120%;
+  margin-left: 15px;
+  padding-bottom: 50px;
+}
+.photos__slider__box__text__p {
+  margin-left: 15px;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 0 auto;
+}
+
+.slider img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: 250px;
+  object-fit: cover;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+.slider .slick-slide {
+  margin: 0 10px;
+}
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;
+  /*矢印の色*/
+  border-right: 2px solid #666;
+  /*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  /*ドットボタンのサイズ*/
+  height: 8px;
+  /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc;
+  /*ドットボタンの色*/
+  border: 0;
+}
+
+#photos__box1 .slick-dots .slick-active button {
+  background: #E3A5B5;
+  /*ドットボタンの現在地表示の色*/
+}
+
+#photos__box2 .slick-dots .slick-active button {
+  background: #F5A600;
+  /*ドットボタンの現在地表示の色*/
+}
+
+#photos__box3 .slick-dots .slick-active button {
+  background: #A57027;
+  /*ドットボタンの現在地表示の色*/
+}
+
+#photos__box4 .slick-dots .slick-active button {
+  background: #C2D3E9;
+  /*ドットボタンの現在地表示の色*/
+}
+
+/*==================================================
+Contact
+===================================*/
+.contactWrapper {
+  width: 100%;
+  height: 120vh;
+  background: linear-gradient(253deg, #f98ba4 0%, #f98ba4 40%, white 100%);
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .contactWrapper {
+    height: 150vh;
+  }
+}
+
+.contact__box {
+  max-width: 700px;
+  height: 700px;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .contact__box {
+    width: 90%;
+    height: 900px;
+  }
+}
+.contact__box__title__h1 {
+  font-size: 500%;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact-wrapper__form__box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .contact-wrapper__form__box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact-wrapper__form__box__ttl {
+  width: 30%;
+  line-height: 3;
+}
+@media only screen and (max-width: 768px) {
+  .contact-wrapper__form__box__ttl {
+    width: 90%;
+  }
+}
+.contact-wrapper__form__box__input, .contact-wrapper__form__box__area {
+  width: 50%;
+  background: #ECECEC;
+  border: solid 1px #999999;
+}
+@media only screen and (max-width: 768px) {
+  .contact-wrapper__form__box__input, .contact-wrapper__form__box__area {
+    width: 90%;
+  }
+}
+.contact-wrapper__form__box__input {
+  line-height: 3;
+}
+.contact-wrapper__form__box__area {
+  height: 200px;
+}
+
+.contact-btn {
+  width: 150px;
+  background-color: #333333;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-size: 1.5em;
+  border: none;
+  margin-top: 50px;
+}
+.contact-btn:hover {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #999999;
+  transition: 0.5s;
+}
+
+/*==================================================
+Blog
+===================================*/
+.blog__aria {
+  width: 100%;
+  max-width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+@media only screen and (max-width: 768px) {
+  .blog__aria {
+    width: 95%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.blog__container {
+  position: relative;
+}
+.blog__container::after {
+  content: "";
+  padding-top: 60%;
+  display: block;
+}
+
+.img {
+  position: absolute;
+  z-index: 1;
+  width: 80%;
+}
+.img:hover {
+  opacity: 0.5;
+}
+.img-right {
+  right: 0;
+}
+.img-left {
+  left: 0;
+}
+
+.text {
+  position: absolute;
+  z-index: 2;
+  width: 35%;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+@media only screen and (max-width: 768px) {
+  .text {
+    width: 40%;
+  }
+}
+.text-right {
+  right: 0;
+  padding: 0;
+  left: 95%;
+  top: 50%;
+  transform: translate(-95%, -50%);
+}
+.text-right h3 {
+  text-align: right;
+  padding: 0;
+}
+.text-right p {
+  text-align: right;
+  padding: 0;
+}
+.text-left {
+  left: 0;
+}
+
+.blog__link {
+  text-decoration: none;
+  width: 100%;
+  display: block;
+}
+.blog__link-h3 {
+  font-size: 500%;
+  color: #333333;
+  text-shadow: 2px 2px 4px #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .blog__link-h3 {
+    font-size: 200%;
+  }
+}
+.blog__link-p {
+  font-size: 300%;
+  color: #333333;
+  line-height: 300%;
+}
+@media only screen and (max-width: 768px) {
+  .blog__link-p {
+    font-size: 120%;
+  }
+}
+
+.current a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.current a:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 3px;
+  background: #555;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+.current a:hover:before {
+  transform: scale(1);
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colors to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colors to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border color to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}

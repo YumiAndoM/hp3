@@ -1,0 +1,10 @@
+@charset "UTF-8";
+body {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+
+.dancing-script-fonts {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}

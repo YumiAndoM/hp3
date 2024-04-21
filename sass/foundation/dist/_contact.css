@@ -1,0 +1,95 @@
+@charset "UTF-8";
+/*==================================================
+Contact
+===================================*/
+.contactWrapper {
+  width: 100%;
+  height: 120vh;
+  background: linear-gradient(253deg, #f98ba4 0%, #f98ba4 40%, white 100%);
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .contactWrapper {
+    height: 150vh;
+  }
+}
+
+.contact__box {
+  max-width: 700px;
+  height: 700px;
+  width: 100%;
+  background: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+  padding-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .contact__box {
+    width: 90%;
+    height: 900px;
+  }
+}
+.contact__box__title__h1 {
+  font-size: 500%;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact-wrapper__form__box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .contact-wrapper__form__box {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.contact-wrapper__form__box__ttl {
+  width: 30%;
+  line-height: 3;
+}
+@media only screen and (max-width: 768px) {
+  .contact-wrapper__form__box__ttl {
+    width: 90%;
+  }
+}
+.contact-wrapper__form__box__input, .contact-wrapper__form__box__area {
+  width: 50%;
+  background: #ECECEC;
+  border: solid 1px #999999;
+}
+@media only screen and (max-width: 768px) {
+  .contact-wrapper__form__box__input, .contact-wrapper__form__box__area {
+    width: 90%;
+  }
+}
+.contact-wrapper__form__box__input {
+  line-height: 3;
+}
+.contact-wrapper__form__box__area {
+  height: 200px;
+}
+
+.contact-btn {
+  width: 150px;
+  background-color: #333333;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ffffff;
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+  font-size: 1.5em;
+  border: none;
+  margin-top: 50px;
+}
+.contact-btn:hover {
+  background-color: #ffffff;
+  color: #333333;
+  border: 1px solid #999999;
+  transition: 0.5s;
+}

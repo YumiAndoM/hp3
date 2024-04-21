@@ -1,0 +1,124 @@
+@charset "UTF-8";
+.photos__slider__box {
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  width: 95%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+}
+
+.photos__slider__box__text {
+  width: 100%;
+  height: 160px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+  margin-bottom: 30px;
+}
+.photos__slider__box__text__h3 {
+  font-weight: bold;
+  padding-top: 30px;
+  font-size: 120%;
+  margin-left: 15px;
+  padding-bottom: 50px;
+}
+.photos__slider__box__text__p {
+  margin-left: 15px;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+  /*横幅94%で左右に余白を持たせて中央寄せ*/
+  width: 94%;
+  margin: 0 auto;
+}
+
+.slider img {
+  width: 100%;
+  /*スライダー内の画像を横幅100%に*/
+  height: 250px;
+  object-fit: cover;
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+.slider .slick-slide {
+  margin: 0 10px;
+}
+
+/*矢印の設定*/
+/*戻る、次へ矢印の位置*/
+.slick-prev,
+.slick-next {
+  position: absolute;
+  /*絶対配置にする*/
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #666;
+  /*矢印の色*/
+  border-right: 2px solid #666;
+  /*矢印の色*/
+  height: 15px;
+  width: 15px;
+}
+
+.slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: -1.5%;
+  transform: rotate(-135deg);
+}
+
+.slick-next {
+  /*次へ矢印の位置と形状*/
+  right: -1.5%;
+  transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+.slick-dots {
+  text-align: center;
+  margin: 20px 0 0 0;
+}
+
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  /*ドットボタンのサイズ*/
+  height: 8px;
+  /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #ccc;
+  /*ドットボタンの色*/
+  border: 0;
+}
+
+#photos__box1 .slick-dots .slick-active button {
+  background: #E3A5B5;
+  /*ドットボタンの現在地表示の色*/
+}
+
+#photos__box2 .slick-dots .slick-active button {
+  background: #F5A600;
+  /*ドットボタンの現在地表示の色*/
+}
+
+#photos__box3 .slick-dots .slick-active button {
+  background: #A57027;
+  /*ドットボタンの現在地表示の色*/
+}
+
+#photos__box4 .slick-dots .slick-active button {
+  background: #C2D3E9;
+  /*ドットボタンの現在地表示の色*/
+}

@@ -1,0 +1,47 @@
+@use "../setting" as *;
+
+@use "_breakpoint" as *;
+
+@mixin max($breakPoint) {
+  @media #{map-get($breakPints, $breakPoint)} {
+    @content;
+  }
+}
+
+@mixin danceScript($weight: 400) {
+  font-family: "Dancing Script", cursive;
+  // font-optical-sizing: auto;
+  font-weight: $weight;
+  font-style: normal;
+}
+
+@mixin flex($space-between: space-between) {
+  display: flex;
+  justify-content: $space-between;
+  align-items: center;
+}
+
+@mixin flexTop($space-between: space-between) {
+  display: flex;
+  justify-content: $space-between;
+}
+
+@mixin positionArrangement ($left:50%, $top: 50%, $translateX: -50%, $translateY: -50%) {
+  left: $left;
+  top: $top;
+  
+  transform: translate($translateX, $translateY);
+}
+
+@mixin borderRadius ($topL: 50px, $topR: 50px, $bottomL: 50px, $bottomR: 50px){
+  border-top-left-radius: $topL;
+  border-top-right-radius: $topR;
+  border-bottom-left-radius: $bottomL;
+  border-bottom-right-radius: $bottomR;
+}
+
+@mixin marginCenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

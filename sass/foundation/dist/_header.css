@@ -1,0 +1,43 @@
+/*==================================================
+header
+===================================*/
+.list__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  right: 3em;
+  top: 2em;
+  width: 30em;
+  z-index: 999999;
+}
+@media only screen and (max-width: 768px) {
+  .list__wrapper {
+    width: 50%;
+    right: 3em;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .list__wrapper {
+    width: 70%;
+    right: 3%;
+  }
+}
+.list__item {
+  font-size: 1.5em;
+}
+@media only screen and (max-width: 768px) {
+  .list__item {
+    margin-left: 2%;
+  }
+}
+.list__item__link {
+  color: #333333;
+  text-decoration: none;
+}
+@media only screen and (max-width: 768px) {
+  .list__item__link {
+    font-size: 70%;
+  }
+}

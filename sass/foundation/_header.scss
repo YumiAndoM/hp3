@@ -1,0 +1,46 @@
+@use "../global" as *;
+
+
+/*==================================================
+header
+===================================*/
+.list {
+  &__wrapper {
+  @include flex;
+  position: fixed;
+  z-index: 10;
+  right: 3em;
+  top: 2em;
+  width: 30em;
+  z-index: 999999;
+
+  @include max(m) {
+    width: 50%;
+    right: 3em;
+  }
+
+  @include max(xs) {
+    width: 70%;
+    right: 3%;
+  }
+
+  }
+
+  &__item {
+
+    font-size: 1.5em;
+
+    @include max(m) {
+      margin-left: 2%;
+    }
+
+    &__link {
+      color: $cBlack;
+      text-decoration: none;
+
+      @include max(m) {
+        font-size: 70%;
+      }
+    }
+  }
+}

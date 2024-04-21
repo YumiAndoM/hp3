@@ -1,0 +1,293 @@
+@charset "UTF-8";
+body {
+  font-family: "游明朝", "Yu Mincho", YuMincho, "Hiragino Mincho Pro", serif;
+}
+
+.dancing-script-fonts {
+  font-family: "Dancing Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.h1__title {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  font-size: 800% !important;
+  letter-spacing: 0.1em;
+  top: 40%;
+}
+
+.h2__subtitle {
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  top: 45%;
+  font-size: 300%;
+  letter-spacing: 0.2em;
+}
+
+#slider {
+  width: 100%;
+  height: 100vh;
+  /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+.list__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  right: 3em;
+  top: 2em;
+  width: 20%;
+}
+.list__item {
+  font-size: 1.5em;
+}
+.list__item__link {
+  color: #333333;
+  text-decoration: none;
+}
+
+.catch__copy__box {
+  position: absolute;
+  z-index: 5;
+  width: 15em;
+  display: block;
+  padding: 3em;
+  background: #ffffff;
+  opacity: 0.7;
+  left: 10%;
+  top: 50%;
+  transform: translate(-10%, -50%);
+}
+.catch__copy__title {
+  font-size: 200%;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.catch__copy__title__ruby {
+  font-size: 70%;
+  display: block;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+.catch__copy__title__sub {
+  margin-bottom: 3em;
+  font-size: 120%;
+}
+.catch__copy__text {
+  font-size: 120%;
+  line-height: 1.5em;
+}
+
+.box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.box__img {
+  position: absolute;
+  z-index: 1;
+}
+.box__title {
+  position: absolute;
+  z-index: 5;
+  font-size: 500%;
+  color: #ffffff;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -40%);
+}
+
+.list__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  right: 3em;
+  top: 2em;
+  width: 20%;
+}
+.list__item {
+  font-size: 1.5em;
+}
+.list__item__link {
+  color: #333333;
+  text-decoration: none;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-weight: normal;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colors to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colors to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border color to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}

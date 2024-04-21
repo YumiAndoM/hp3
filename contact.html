@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact HP3 | WithCode</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+  <div class="contactWrapper">
+    <header id="header">
+      <ul class="list__wrapper">
+        <li class="list__item"><a href="index.html" class="list__item__link">home</a></li>
+        <li class="list__item"><a href="photos.html" class="list__item__link">photos</a></li>
+        <li class="list__item"><a href="#" class="list__item__link">contact</a></li>
+        <li class="list__item"><a href="blog.html" class="list__item__link">blog</a></li>
+      </ul>
+    </header>
+
+    <main>
+
+      <section class="contact__box" id="contact">
+        <div class="contact__box__title">
+          <h1 class="contact__box__title__h1 dancing-script-fonts">Contact</h1>
+        </div>
+
+
+
+        <div class="contact-wrapper__form__box">
+          <label for="name" class="contact-wrapper__form__box__ttl">Name</label>
+          <input type="text" class="contact-wrapper__form__box__input" name="お名前（漢字）" required="required" placeholder="お名前をご入力下さい">
+        </div>
+
+
+        <div class="contact-wrapper__form__box">
+          <label for="email" class="contact-wrapper__form__box__ttl">E-mail</label>
+          <input type="email" class="contact-wrapper__form__box__input" name="メールアドレス" required="required" placeholder="例）example@example.com">
+        </div>
+
+
+        <div class="contact-wrapper__form__box">
+          <label for="tel" class="contact-wrapper__form__box__ttl">Tel</label>
+          <input type="email" class="contact-wrapper__form__box__input" name="メールアドレス" required="required" placeholder="例）03-1111-1111">
+        </div>
+        
+        
+        <div class="contact-wrapper__form__box">
+          <label for="message" class="contact-wrapper__form__box__ttl">Message</label>
+          <textarea name="お問い合わせ内容" class="contact-wrapper__form__box__area" id="message" required="required" placeholder="お問い合わせ内容をご入力下さい"></textarea>
+        </div>
+        <button type="submit" class="btn contact-btn">Send</button>
+      </section>
+    </main>
+    <footer id="footer" class="home__footer">
+    <p>©SHIKI ALL rights reserved</p>
+  </footer>
+  </div>
+</body>
+  <script type="text/javascript" src="js/main.js"></script>
+</html>

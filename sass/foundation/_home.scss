@@ -1,0 +1,185 @@
+@use "../global" as *;
+
+.h1__title {
+  position: relative;
+  color: $cWhite;
+  text-align: center;
+  font-size: 800%;
+  letter-spacing: 0.1em;
+  top: 40%;
+
+      @include max(m) {
+      font-size: 400%;
+      }
+
+}
+
+.h2__subtitle {
+  position: relative;
+  color: $cWhite;
+  text-align: center;
+  top: 45%;
+  font-size: 300%;
+  letter-spacing: 0.2em;
+}
+
+#slider {
+    width: 100%;
+    height: 100vh;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+// .list {
+//   &__wrapper {
+//   @include flex;
+//   position: fixed;
+//   z-index: 10;
+//   right: 3em;
+//   top: 2em;
+//   width: 20%;
+
+//   }
+
+//   &__item {
+
+//     font-size: 1.5em;
+//     &__link {
+//       color: $cBlack;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+.catch__copy {
+  &__box {
+    position: absolute;
+    z-index: 5;
+    width: 15em;
+    display: block;
+    padding: 3em;
+    
+    background: $cWhite;
+    opacity: 0.7;
+    @include positionArrangement($left: 10%, $translateX: -10%);
+
+    @include max(m) {
+      @include positionArrangement;
+    }
+  }
+
+
+// ブラー
+.scroll-space{
+  transition: all 0.5s;
+    filter: blur(10px);
+    &.scrollin{
+      filter: blur(0);
+  }
+}
+  
+
+
+
+  &__title {
+    font-size: 200%;
+    text-align: center;
+    margin-bottom: 2em;
+
+
+    &__ruby {
+      font-size: 70%;
+      display: block;
+      text-align: center;
+      margin-bottom: 0.5em;
+    }
+
+    &__sub {
+      margin-bottom: 3em;
+      font-size: 120%;
+    }
+  }
+
+  &__text {
+    font-size: 120%;
+    line-height: 1.5em;
+  }
+}
+.box {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 5;
+    font-size: 600%;
+    color: $cWhite;
+    @include positionArrangement($top: 40%, $translateY: -40%);
+
+  }
+}
+
+.home__vewPhotos__bottun {
+  position: absolute;
+  z-index: 5;
+  @include positionArrangement($top: 60%, $translateY: -60%);
+  width: 20em;
+  text-align: center;
+  // @include borderRadius;
+  // border: solid 1px $cWhite;
+  // height: 5em;
+
+  &__link {
+    // text-decoration: none;
+    // text-align: center;
+    // color: $cWhite;
+    font-size: 1.5em;
+    // padding-top: 1em;
+    // padding-bottom: 1em;
+    // // line-height: 2.5em;
+    // display: inline-block;
+    // width: 100%;
+    // @include borderRadius;
+
+    // /*アニメーションの指定*/
+    // transition: all 0.4s ease-out;
+
+    /*ボタンの形状*/
+    display: inline-block;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 13em;
+    // padding: 10px 60px;
+    // margin: 20px 0 0 0;
+    @include borderRadius;
+    text-decoration: none;
+    border:1px solid #fff;
+    color: #fff;
+    /*アニメーションの指定*/
+    transition: all 0.4s ease-out;
+  }
+}
+
+.home__vewPhotos__bottun__link:hover,
+#box2 .home__vewPhotos__bottun__link:hover {
+    /*ボタンの形状*/
+    border-color:transparent;
+    color: #fff;
+    /*背景の色と形状*/
+    background: linear-gradient(270deg,#3bade3 0%, #9844b7 50%, #44ea76 100%);
+    background-size: 200% auto;
+    background-position: right center;
+    /*ボックスの影*/   
+    box-shadow: 0 5px 10px rgb(250,108,159,0.4);
+
+}
+
+
+#header__main {
+  position: relative;
+}

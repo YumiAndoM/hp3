@@ -1,0 +1,37 @@
+/*==================================================
+Photos
+===================================*/
+.photos__title__h1 {
+  width: 100%;
+  height: 500px;
+  font-size: 800%;
+  text-align: center;
+  line-height: 500px;
+}
+
+.photos__slideshow__container {
+  width: 100%;
+  height: 200px;
+  display: block;
+  margin-bottom: 500px;
+}
+.photos__slideshow__title {
+  font-size: 400%;
+  padding-left: 50px;
+}
+
+#photos__box1 .seasonColor {
+  color: #E3A5B5;
+}
+
+#photos__box2 .seasonColor {
+  color: #F5A600;
+}
+
+#photos__box3 .seasonColor {
+  color: #A57027;
+}
+
+#photos__box4 .seasonColor {
+  color: #C2D3E9;
+}
