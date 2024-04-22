@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*==================================================
+home
+===================================*/
 .h1__title {
   position: relative;
   color: #ffffff;
@@ -30,7 +33,7 @@
 
 .catch__copy__box {
   position: absolute;
-  z-index: 5;
+  z-index: 55000;
   width: 15em;
   display: block;
   padding: 3em;
@@ -45,21 +48,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
-}
-.catch__copy .fadeUp {
-  animation: fadeUpAnime 0.8s forwards;
-  opacity: 0;
-}
-.catch__copy .fadeUpTrigger {
-  opacity: 0;
-}
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 .catch__copy__title {
@@ -80,6 +68,28 @@
 .catch__copy__text {
   font-size: 120%;
   line-height: 1.5em;
+}
+
+/*== 4-6　じわっ（ぼかしから出現） ==*/
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 0.7;
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fade {
+  opacity: 0;
 }
 
 .box {

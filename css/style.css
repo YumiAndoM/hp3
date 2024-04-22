@@ -70,6 +70,9 @@ footer
   bottom: 0;
 }
 
+/*==================================================
+home
+===================================*/
 .h1__title {
   position: relative;
   color: #ffffff;
@@ -100,7 +103,7 @@ footer
 
 .catch__copy__box {
   position: absolute;
-  z-index: 5;
+  z-index: 55000;
   width: 15em;
   display: block;
   padding: 3em;
@@ -115,21 +118,6 @@ footer
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-  }
-}
-.catch__copy .fadeUp {
-  animation: fadeUpAnime 0.8s forwards;
-  opacity: 0;
-}
-.catch__copy .fadeUpTrigger {
-  opacity: 0;
-}
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 .catch__copy__title {
@@ -150,6 +138,28 @@ footer
 .catch__copy__text {
   font-size: 120%;
   line-height: 1.5em;
+}
+
+/*== 4-6　じわっ（ぼかしから出現） ==*/
+.blur {
+  animation-name: blurAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes blurAnime {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 0.7;
+  }
+}
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fade {
+  opacity: 0;
 }
 
 .box {
@@ -505,19 +515,20 @@ Blog
 .text {
   position: absolute;
   z-index: 2;
-  width: 35%;
+  width: 100%;
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
 }
 @media only screen and (max-width: 768px) {
   .text {
-    width: 40%;
+    width: 100%;
   }
 }
 .text-right {
   right: 0;
   padding: 0;
+  text-align: right;
   left: 95%;
   top: 50%;
   transform: translate(-95%, -50%);
@@ -570,13 +581,34 @@ Blog
   position: absolute;
   left: 0;
   bottom: -4px;
-  width: 100%;
+  width: 35%;
   height: 3px;
   background: #555;
   transform: scale(0, 1);
   transition: 0.4s;
 }
 .current a:hover:before {
+  transform: scale(1);
+}
+
+.current-right a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.current-right a:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 65%;
+  bottom: -4px;
+  width: 35%;
+  height: 3px;
+  background: #555;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+.current-right a:hover:before {
   transform: scale(1);
 }
 

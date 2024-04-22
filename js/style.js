@@ -34,49 +34,34 @@ $('#slider').vegas({
 
 
 
-	// ブラー
+// ブラー
 
-// $(window).scroll(function (){
-// 	$('.scroll-space').each(function(){
-// 		var elemPos = $(this).offset().top,
-// 		scroll = $(window).scrollTop(),
-// 		windowHeight = $(window).height();
 
-// 			if (scroll > elemPos - windowHeight + 150){
-// 				$(this).addClass('scrollin');
-// 			}
-// 	});
-// });
 
-function fadeIn() {
-	$('.fadeUpTrigger').each(function () {
-  let scroll = $(window).scrollTop();
-  let triTop = $(this).offset().top + 100;
-  let winHight = $(window).height();
-  if (scroll >= triTop - winHight) {
-    $(this).addClass('fadeUp');
+let fade = $('.fade');
+
+$(window).scroll(function () {
+
+  if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+    fade.addClass("blur");
+
   } else {
-    $(this).removeClass('fadeUp');
+    fade.removeClass("blur");
+
   }
-  });
-  
-}
+});
 
-
-  $(window).scroll(function () {
-    fadeIn();
-  });
 
 
 
 // 一ページ表示
 
-$.scrollify({
-section : ".box",//1ページスクロールさせたいエリアクラス名
-scrollbars:"false",//スクロールバー表示・非表示設定
-interstitialSection : "#header,#footer",//ヘッダーフッターを認識し、1ページスクロールさせず表示されるように設定
-easing: "swing", // 他にもlinearやeaseOutExpoといったjQueryのeasing指定可能
-scrollSpeed: 300, // スクロール時の速度
+// $.scrollify({
+// section : ".box",//1ページスクロールさせたいエリアクラス名
+// scrollbars:"false",//スクロールバー表示・非表示設定
+// interstitialSection : "#header,#footer",//ヘッダーフッターを認識し、1ページスクロールさせず表示されるように設定
+// easing: "swing", // 他にもlinearやeaseOutExpoといったjQueryのeasing指定可能
+// scrollSpeed: 300, // スクロール時の速度
 
 //以下、ページネーション設定
 // before:function(i,panels) {
@@ -100,7 +85,7 @@ scrollSpeed: 300, // スクロール時の速度
 // $(".pagination a").on("click",$.scrollify.move);
 // }
 
-});
+// });
 
 
 

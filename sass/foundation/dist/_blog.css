@@ -45,19 +45,20 @@ Blog
 .text {
   position: absolute;
   z-index: 2;
-  width: 35%;
+  width: 100%;
   left: 0;
   top: 50%;
   transform: translate(0, -50%);
 }
 @media only screen and (max-width: 768px) {
   .text {
-    width: 40%;
+    width: 100%;
   }
 }
 .text-right {
   right: 0;
   padding: 0;
+  text-align: right;
   left: 95%;
   top: 50%;
   transform: translate(-95%, -50%);
@@ -110,12 +111,33 @@ Blog
   position: absolute;
   left: 0;
   bottom: -4px;
-  width: 100%;
+  width: 35%;
   height: 3px;
   background: #555;
   transform: scale(0, 1);
   transition: 0.4s;
 }
 .current a:hover:before {
+  transform: scale(1);
+}
+
+.current-right a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+.current-right a:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 65%;
+  bottom: -4px;
+  width: 35%;
+  height: 3px;
+  background: #555;
+  transform: scale(0, 1);
+  transition: 0.4s;
+}
+.current-right a:hover:before {
   transform: scale(1);
 }

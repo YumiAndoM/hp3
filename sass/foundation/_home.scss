@@ -1,5 +1,9 @@
 @use "../global" as *;
 
+
+/*==================================================
+home
+===================================*/
 .h1__title {
   position: relative;
   color: $cWhite;
@@ -49,10 +53,15 @@
 //   }
 // }
 
+// .box #catch__area {
+//   position: absolute;
+//   @include positionArrangement($left: 10%, $translateX: -10%);
+// }
+
 .catch__copy {
   &__box {
     position: absolute;
-    z-index: 5;
+    z-index: 55000;
     width: 15em;
     display: block;
     padding: 3em;
@@ -65,35 +74,6 @@
       @include positionArrangement;
     }
   }
-
-
-// ブラー
-// .scroll-space{
-//   transition: all 0.5s;
-//     filter: blur(10px);
-//     &.scrollin{
-//       filter: blur(0);
-//   }
-// }
-
-.fadeUp {
-  animation: fadeUpAnime 0.8s forwards;
-  opacity: 0;
-}
-.fadeUpTrigger {
-  opacity: 0;
-}
-@keyframes fadeUpAnime {
-  from {
-    opacity: 0;
-    // transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    // transform: translateY(0);
-  }
-}
-
 
   &__title {
     font-size: 200%;
@@ -119,6 +99,39 @@
     line-height: 1.5em;
   }
 }
+
+
+/*== 4-6　じわっ（ぼかしから出現） ==*/
+
+.blur{
+	animation-name: blurAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+	filter: blur(10px);
+	// transform: scale(1.02);
+	opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	// transform: scale(1);
+	opacity: 0.7;
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+
+.fade{
+    opacity: 0;
+}
+
+
+
+
 .box {
   position: relative;
   width: 100%;
