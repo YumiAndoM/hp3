@@ -241,8 +241,8 @@ Photos
 ===================================*/
 .photos__title__h1 {
   width: 100%;
-  height: 500px;
-  font-size: 800%;
+  height: 400px;
+  font-size: 600%;
   text-align: center;
   line-height: 500px;
 }
@@ -360,7 +360,7 @@ Photos
   color: transparent;
   outline: none;
   width: 8px; /*ドットボタンのサイズ*/
-  height: 8px; /*ドットボタンのサイズ*/
+  height: 11px; /*ドットボタンのサイズ*/
   display: block;
   border-radius: 50%;
   background: #ccc; /*ドットボタンの色*/
@@ -394,12 +394,7 @@ Contact
 }
 @media only screen and (max-width: 768px) {
   .contactWrapper {
-    height: 150vh;
-  }
-}
-@media only screen and (max-width: 430px) {
-  .contactWrapper {
-    height: 200vh;
+    height: clamp(75rem, 68.182rem + 34.09vw, 93.75rem);
   }
 }
 
@@ -410,8 +405,8 @@ Contact
   background: #ffffff;
   position: absolute;
   left: 50%;
-  top: 40%;
-  transform: translate(-50%, -40%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   padding-bottom: 20px;
 }
 @media only screen and (max-width: 768px) {

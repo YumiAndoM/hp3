@@ -13,12 +13,12 @@ Contact
 
 
   @include max(m) {
-    height: 150vh;
+    height: clamp(75rem, 68.182rem + 34.09vw, 93.75rem);
   }
 
-  @include max(xs) {
-    height: 200vh;
-  }
+  // @include max(xs) {
+  //   height: 160vh;
+  // }
 }
 
 .contact__box {
@@ -27,7 +27,7 @@ Contact
   width: 100%;
   background: $cWhite;
   position: absolute;
-  @include positionArrangement($top:40%, $translateY: -40%);
+  @include positionArrangement($top:50%, $translateY: -50%);
   padding-bottom: 20px;
 
 
