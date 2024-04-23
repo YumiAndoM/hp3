@@ -16,9 +16,10 @@ Photos
 .photos__slideshow {
   &__container {
     width: 100%;
-    height: 200px;
+    // height: 200px;
+    height: auto;
     display: block;
-    margin-bottom: 500px;
+    margin-bottom: 100px;
     // background-color: aqua;
   }
 

@@ -34,6 +34,7 @@ Blog
 }
 .img:hover {
   opacity: 0.5;
+  transition: 0.5s;
 }
 .img-right {
   right: 0;

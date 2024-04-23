@@ -15,6 +15,10 @@ Contact
   @include max(m) {
     height: 150vh;
   }
+
+  @include max(xs) {
+    height: 200vh;
+  }
 }
 
 .contact__box {
@@ -31,6 +35,7 @@ Contact
     width: 90%;
     height: 900px;
   }
+
 
   
   &__title {
@@ -83,6 +88,7 @@ Contact
 
 .contact-btn {
   width: 150px;
+  height: 2.3em;
   background-color: $cBlack;
   @include marginCenter;
   color: $cWhite;

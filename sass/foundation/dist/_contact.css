@@ -13,6 +13,11 @@ Contact
     height: 150vh;
   }
 }
+@media only screen and (max-width: 430px) {
+  .contactWrapper {
+    height: 200vh;
+  }
+}
 
 .contact__box {
   max-width: 700px;
@@ -77,6 +82,7 @@ Contact
 
 .contact-btn {
   width: 150px;
+  height: 2.3em;
   background-color: #333333;
   display: block;
   margin-left: auto;

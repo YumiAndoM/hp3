@@ -11,9 +11,9 @@ Photos
 
 .photos__slideshow__container {
   width: 100%;
-  height: 200px;
+  height: auto;
   display: block;
-  margin-bottom: 500px;
+  margin-bottom: 100px;
 }
 .photos__slideshow__title {
   font-size: 400%;

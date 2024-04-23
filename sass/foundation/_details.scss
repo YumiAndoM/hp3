@@ -7,11 +7,16 @@ details
 
 #details__main {
   width: 100%;
-  max-width: 1200px;
+  max-width: 768px;
   @include marginCenter;
   margin-bottom: 100px;
 
   margin-top: 200px;
+
+  @include max(m) {
+    width: 95%;
+    @include marginCenter;
+  }
 }
 
 // .details__aria {
@@ -22,24 +27,24 @@ details
   &__img__block {
     &-img {
       width: 100%;
-      height: 700px;
+      height: 500px;
       object-fit: cover;
     }
   }
 
   &__day {
-    font-size: 300%;
+    font-size: 200%;
     margin-top: 50px;
   }
 
   &__title {
-    font-size: 300%;
+    font-size: 200%;
   }
 
   &__text {
-    font-size: 150%;
+    font-size: 100%;
     margin-top: 30px;
-    line-height: 1.3em;
+    line-height: 1.5em;
   }
 }
 
@@ -49,7 +54,15 @@ details
   &__linkArea {
     width: 30%;
     @include marginCenter;
-    margin-top: 100px
+    margin-top: 100px;
+
+    @include max(m) {
+      width: 50%
+    }
+
+    @include max(xs) {
+      width: 80%;
+    }
   }
   &__link__area {
     @include flex;

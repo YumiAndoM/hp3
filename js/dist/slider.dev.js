@@ -17,6 +17,15 @@ $('.slider').slick({
   dots: true,
   //下部ドットナビゲーションの表示
   responsive: [{
+    breakpoint: 999,
+    //モニターの横幅が769px以下の見せ方
+    settings: {
+      slidesToShow: 3,
+      //スライドを画面に2枚見せる
+      slidesToScroll: 2 //1回のスクロールで2枚の写真を移動して見せる
+
+    }
+  }, {
     breakpoint: 769,
     //モニターの横幅が769px以下の見せ方
     settings: {
@@ -26,7 +35,7 @@ $('.slider').slick({
 
     }
   }, {
-    breakpoint: 426,
+    breakpoint: 500,
     //モニターの横幅が426px以下の見せ方
     settings: {
       slidesToShow: 1,
